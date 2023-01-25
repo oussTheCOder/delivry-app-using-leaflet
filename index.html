@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+ 
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script defer src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+       <!-- Load Leaflet from CDN-->
+       <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+       <script src="https://unpkg.com/leaflet/dist/leaflet-src.js"></script>
+   
+       <!-- Load Esri Leaflet from CDN -->
+       <script src="https://unpkg.com/esri-leaflet"></script>
+   
+       <!-- Esri Leaflet Geocoder -->
+       <link
+         rel="stylesheet"
+         href="https://unpkg.com/esri-leaflet-geocoder/dist/esri-leaflet-geocoder.css"
+       />
+       <script src="https://unpkg.com/esri-leaflet-geocoder"></script>
+    <script defer src="script.js"></script>
+    <title>leafLet.js app challenge</title>
+</head>
+<body>
+    <section class="map">
+        <div class="map-area" id="myMap">
+        </div>
+        <div class="map-description_box">
+            <h1>Hello dear user</h1>
+            <p>Where you want to go ?</p>
+            <div class="select-dis_box">
+                <img src="" alt="" class="search_img">
+                <button class="select-dis_btn">Select the distination</button>
+            </div>
+        </div>
+        <div class="starting-state">
+            <h1>Hello dear user</h1>
+            <p>choose your starting point</p>
+            <div class="validate-start_box">
+                <img src="" alt="" class="search_img">
+                <button class="validate-start_btn">Validate</button>
+            </div>
+        </div>
+        <div class="ending-state">
+            <h1>Hello dear user</h1>
+            <p>choose your ending point</p>
+            <div class="validate-end_box">
+                <img src="" alt="" class="search_img">
+                <button class="validate-end_btn">Validate</button>
+            </div>
+        </div>
+        <div class="confirm-dist-state">
+            <h1>Hello dear user</h1>
+            <p>want to confirm the distination?</p>
+            <div class="confirm-dist_box">
+                <img src="" alt="" class="search_img">
+                <button class="confirm-dist_btn">Confirm</button>
+            </div>
+        </div>
+        <form action="" class="map-form">
+            <div class="close-form"><img src="" alt=""></div>
+            <div class="search-init_box">
+                <img src="" alt="">
+                <input type="search" class="select-pos_init" name="" id="" placeholder="choose depart">
+            </div>
+            <div class="search-end_box">
+                <img src="" alt="">
+                <input type="search" class="select-pos_end" name="" id="" placeholder="choose distination">
+            </div>
+            <!-- appears when input event on search -->
+            <div class="suggested-pos"></div> 
+            <!--  -->
+            <div class="actual-pos_box">Actuel position</div>
+            <div class="define-pos_box">Select position from the map</div>
+        </form>
+   
+    </section>
+   
+</body>
+</html>
