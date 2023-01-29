@@ -1,0 +1,134 @@
+:root{
+    --padding:1em;
+    --margin:1.5em;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*what deos mean*/
+}
+body{
+    width: 100vw;
+    height:100vh;
+}
+section.map{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.map-area{
+    height: 70vh;
+    width:100vw;
+}
+.map-form{
+    display:none;
+}
+
+.map-description_box{
+    height:30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#FAD3E7;
+}
+.map-description_box>*:not(.select-dis_box){
+    padding:var(--padding);
+}
+.select-dis_box{
+    margin-top:var(--margin);
+    width:100%; 
+    height:100%;
+}
+.select-dis_btn, .select-pos_init, .select-pos_end,.actual-pos_box,.define-pos_box{
+    cursor: pointer;
+    width:90%;
+    height:35px;
+    border:0;
+    border-bottom:2px solid rgba(0, 0, 0, 0.256);
+}
+.select-dis_btn{
+    background-color:#FAD3E7;
+}
+.map-form{
+    border:1px solid black;
+    width:100%;
+    height:100%;
+    position:relative;
+}
+.map-form .close-form{
+    cursor: pointer;
+    width:30px;
+    height:30px;
+    border-radius: 100%;
+    position:absolute;
+    right:10px;
+    top:10px;
+    background-color: #FAD3E7;
+}
+.map-form .select-pos_init{
+    margin-top: calc(var(--margin)*2);
+    outline:none;
+}
+.map-form .select-pos_init:focus{
+    border-bottom:#0081B4 3px solid;
+}
+.map-form .select-pos_end{ 
+    margin-top: calc(var(--margin)*0.5);
+    margin-bottom: calc(var(--margin)*0.5);
+    outline:none;
+
+}
+.map-form .select-pos_end:focus{
+    border-bottom:#FAD3E7 3px solid;
+}
+
+.actual-pos_box,.define-pos_box{
+    padding: var(--padding);
+    background-color:RGB(0,0,0,0);
+    border: 0;
+}
+.starting-state,.ending-state,.confirm-dist-state{
+    display:none;
+}
+.starting-state,.ending-state,.confirm-dist-state{
+    
+    height:30%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(255,255,255);
+    display: none;
+}
+.starting-state>*:not(.validate-start_box),
+.ending-state>*:not(.validate-end_box),
+.confirm-dist-state>*:not(.confirm-dist_box){
+   text-align: center;
+   padding: var(--padding);
+}
+.validate-start_box,.validate-end_box,.confirm-dist_box{
+    width:100%;
+    text-align: center;
+}
+.validate-start_btn,.validate-end_btn,.confirm-dist_btn{
+    cursor: pointer;
+    width:60%;
+    height:35px;
+    border:0;
+   background-color: #FAD3E7;
+}
+.show {
+    display:block;
+}
+.hide{
+    display:none;
+}
+.popup-style{
+    font-weight: 600;
+    border:#0081B4 3px solid;
+    border-radius: 15px;
+}
