@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <!--  -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
     <!--  -->
     <script defer src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
        <!-- Load Leaflet from CDN-->
@@ -25,7 +26,8 @@
        />
        <script src="https://unpkg.com/esri-leaflet-geocoder"></script>
 <!--  -->
-       <script defer src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
 <!--  -->
        <script defer src="script.js"></script>
     <title>leafLet.js app challenge</title>
@@ -74,10 +76,12 @@
             </div>
             <div class="search-end_box">
                 <img src="" alt="">
-                <input type="search" class="select-pos_end" name="" id="" placeholder="choose distination">
+                <input type="search" class="select-pos_end" name="" id="autosuggest" type="text" placeholder="choose distination">
             </div>
             <!-- appears when input event on search -->
-            <div class="suggested-pos"></div> 
+            <div class="suggested-pos">
+                
+            </div> 
             <!--  -->
             <div class="actual-pos_box">Actuel position</div>
             <div class="define-pos_box">Select position from the map</div>

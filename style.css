@@ -121,6 +121,14 @@ section.map{
     border:0;
    background-color: #FAD3E7;
 }
+.suggested-pos{
+    border:1px solid black;
+    padding:var(--padding);
+    padding-bottom:0;
+}
+.suggested-pos>*{
+    margin-bottom:var(--margin);
+}
 .show {
     display:block;
 }

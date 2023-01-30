@@ -64,7 +64,31 @@ if(navigator.geolocation){//if browser support geolocation
       });
       //adding layer to the map object.
       layer.addTo(map);
-      L.Control.geocoder().addTo(map);
+      // Attach an event listener to the input field
+          document.getElementById("autosuggest").addEventListener("input", function(event) {
+            let text = event.target.value;
+            getSuggestions(text);
+          });
+          function getSuggestions(text) {
+            let apiKey = "AAPKb9da5faa4a754be3a665b30b562013457R_KdFXzCJtmqTBVhWGEyR2YxR85JWZP18HULITIFqXw6Vu75TEC1ci3nmYYlK7e";
+            let url = `https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/suggest?text=${text}&f=json&apiKey=${apiKey}`;
+          
+            // Make a GET request to the ArcGIS Autosuggest endpoint
+            fetch(url)
+              .then(function(response) {
+                return response.json();
+              })
+              .then(function(data) {
+                // Display the suggestions
+                suggestionsContainer.innerHTML="";
+                const suggestedCityNames=data.suggestions.map(suggestion=>suggestion.text);
+                suggestedCityNames.map((city)=>{
+                  const suggestedItem=document.createElement("p");
+                  suggestedItem.textContent=city;
+                  suggestionsContainer.appendChild(suggestedItem);
+              })
+            });
+          }
       getPlaceName(latitude,longitude);
       //geolocation using the nominatim-------------------------------------
       async function getPlaceName(fetchLat,fetchLong) {
@@ -185,13 +209,3 @@ if(navigator.geolocation){//if browser support geolocation
     }
     )}
   })
-
-
-
-
-  suggestionsContainer.addEventListener("click", function(event) {
-    if (event.target.tagName === "LI") {
-      const placeName = event.target.innerHTML;
-      // code to center the map on the selected place
-    }
-  });
