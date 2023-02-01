@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;/*what deos mean*/
 }
+
 body{
     width: 100vw;
     height:100vh;
@@ -29,13 +30,10 @@ section.map{
 
 .map-description_box{
     height:30%;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color:#FAD3E7;
 }
 .map-description_box>*:not(.select-dis_box){
+    text-align: center;
     padding:var(--padding);
 }
 .select-dis_box{
@@ -52,6 +50,9 @@ section.map{
 }
 .select-dis_btn{
     background-color:#FAD3E7;
+    position:relative;
+    left:50%;
+    transform:translateX(-50%);
 }
 .map-form{
     border:1px solid black;
@@ -69,6 +70,7 @@ section.map{
     top:10px;
     background-color: #FAD3E7;
 }
+
 .map-form .select-pos_init{
     margin-top: calc(var(--margin)*2);
     outline:none;
@@ -129,14 +131,15 @@ section.map{
 .suggested-pos>*{
     margin-bottom:var(--margin);
 }
+
+.popup-style{
+    font-weight: 600;
+    border:#0081B4 3px solid;
+    border-radius: 15px;
+}
 .show {
     display:block;
 }
 .hide{
     display:none;
-}
-.popup-style{
-    font-weight: 600;
-    border:#0081B4 3px solid;
-    border-radius: 15px;
 }
